@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 13%;
+            background-color: rgb(243, 212, 173);
+            color: rgb(155, 92, 11);
+            border: 3px solid rgb(228, 186, 95) ;
+            border-radius: 10px;
+            box-shadow: 3px 3px 2px 2px rgb(240, 203, 161); 
+            font-weight: 600;
+            font-family: sans-serif;
+            width: 400px;
+            padding: 75px;
+            margin-left: 30%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function clock() {
+            let now = new Date();
+            let time = now.toLocaleTimeString()
+            document.body.innerHTML= time;
+            let Day = ["<br>Sunday","<br>Monday","<br>Tuesday","<br>Wednesday","<br>Thursday","<br>Friday","<br>Saturday"]
+            document.body.innerHTML += Day[now.getDay()]
+        }
+        setInterval(clock, 1000);
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        .clock-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        #clock {
+            font-size: 60px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+        }
+
+        #day {
+            font-size: 25px;
+            margin-top: 10px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clock-container">
+        <div id="clock">00:00:00</div>
+        <div id="day">Sunday</div>
+    </div>
+
+    <script>
+        function updateClock() {
+            let now = new Date();
+            let time = now.toLocaleTimeString();
+            let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let day = days[now.getDay()];
+
+            document.getElementById("clock").innerHTML = time;
+            document.getElementById("day").innerHTML = day;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call to prevent delay
+    </script>
+
+</body>
+</html> -->
